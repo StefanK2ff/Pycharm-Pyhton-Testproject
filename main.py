@@ -1,25 +1,29 @@
-# This is a sample Python script.
-
-# Press Umschalt+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 import os
 import getpass
 
 def print_hi(name, loc):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name} - I\'m, existing in {loc}')  # Press Strg+F8 to toggle the breakpoint.
+
+    print(f'Hi, {name} - I\'m, existing in {loc}')
 
 def get_location():
     # I try to get the files position back
     return os.path.abspath(__file__)
 
-def get_usernamer():
+def get_username():
     return getpass.getuser()
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi(get_usernamer(), get_location())
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == '__main__':
+    print_hi(get_username(), get_location())
+
+response = input("Do you want to override the name of this message? (Y/N)")
+
+match response:
+    case "Y", "y":
+        print("You chose Yes")
+    case "N", "n":
+        print("Yoi said no.")
+
+
