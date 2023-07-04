@@ -12,10 +12,22 @@ globvar_welcome_message = "Welcome, this is an two-step BMI calculator. After yo
 def calc_bmi (weight, height):
     return weight / height ** 2
 
+def input_digit_validator(input):
+    if input.isdigit():
+        return int(input)
+    else:
+        print("Wrong input, please retry!")
+        return False
+
+height = False  # Initialize the variable with a default value
+weight = False
 
 print(globvar_welcome_message)
 
-height = int(input("Please provide your height in cm: "))
-weight = int(input("Please provide your weight in kgs: "))
+while height is False:  # Loop until a valid input is provided
+    height = input_digit_validator(input("Please provide your height in cm: "))
+
+while weight is False:  # Loop until a valid input is provided
+    weight = input_digit_validator(input("Please provide your weight in kgs: "))
 
 print(f"Your BMI is {calc_bmi(height, weight)}")
