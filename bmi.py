@@ -7,17 +7,21 @@
 # ideas:
 # check if numbers make sense (add lower and upper thresholds
 
-globvar_welcome_message = "Welcome, this is an two-step BMI calculator. After you typed your height, it will aks your weight."
+globvar_welcome_message = "Welcome, this is a two-step BMI calculator. After you typed your height, it will aks your " \
+                          "weight."
 
-def calc_bmi (weight, height):
+
+def calc_bmi(weight, height):
     return weight / height ** 2
 
-def input_digit_validator(input):
-    if input.isdigit():
-        return int(input)
+
+def input_digit_validator(inp):
+    if inp.isdigit():
+        return int(inp)
     else:
         print("Wrong input, please retry!")
         return False
+
 
 height = False  # Initialize the variable with a default value
 weight = False
