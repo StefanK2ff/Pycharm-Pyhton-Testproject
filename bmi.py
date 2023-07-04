@@ -36,3 +36,4 @@ def bmi_via_commandline_input():
         weight = input_digit_validator(input("Please provide your weight in kgs: "))
 
     print(f"Your BMI is {calc_bmi(height, weight)}")
+

@@ -18,3 +18,11 @@ I'm trying out the pycharm IDE (community edition) and some python libraries and
 **Functionality**
 -function to validate input is a digit
 -function which calculates BMI
+
+## argv.py
+**Imports**
+- sys
+
+**Functionality**
+- takes first parameter (a file location) and offers options like
+- function: counting numbers in a file
