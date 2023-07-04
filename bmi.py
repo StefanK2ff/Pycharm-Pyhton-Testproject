@@ -23,15 +23,16 @@ def input_digit_validator(inp):
         return False
 
 
-height = False  # Initialize the variable with a default value
-weight = False
+def bmi_via_commandline_input():
+    height = False  # Initialize the variable with a default value
+    weight = False
 
-print(globvar_welcome_message)
+    print(globvar_welcome_message)
 
-while height is False:  # Loop until a valid input is provided
-    height = input_digit_validator(input("Please provide your height in cm: "))
+    while height is False:  # Loop until a valid input is provided
+        height = input_digit_validator(input("Please provide your height in cm: "))
 
-while weight is False:  # Loop until a valid input is provided
-    weight = input_digit_validator(input("Please provide your weight in kgs: "))
+    while weight is False:  # Loop until a valid input is provided
+        weight = input_digit_validator(input("Please provide your weight in kgs: "))
 
-print(f"Your BMI is {calc_bmi(height, weight)}")
+    print(f"Your BMI is {calc_bmi(height, weight)}")
