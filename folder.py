@@ -5,7 +5,13 @@ import os
 
 globvar_filename = "testfile.txt"
 globvar_path_replaced = os.path.abspath(os.path.join(os.path.dirname(__file__))).replace("\\","/")
-globvar_path_replaced_file = os.path.abspath(os.path.join(os.path.dirname(__file__),globvar_filename)).replace("\\","/")
+globvar_filepath_replaced = os.path.abspath(os.path.join(os.path.dirname(__file__),globvar_filename)).replace("\\","/")
+
+# os.path.join will use a as specific slash
+
+# os.listdir will bring all files and folder in a dir
+
+# os.path.isdir checks if element in dir is file or directory
 
 def line_printer(filename):
     with open(filename, "r") as file:
@@ -18,7 +24,7 @@ if globvar_filename in os.listdir("."):
 
 elif globvar_filename in os.listdir(globvar_path_replaced):
     print("ABSOLUTE")
-    line_printer(globvar_path_replaced_file)
+    line_printer(globvar_filepath_replaced)
 
 else:
     print("file not found!")

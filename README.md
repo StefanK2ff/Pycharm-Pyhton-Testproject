@@ -32,3 +32,4 @@ I'm trying out the pycharm IDE (community edition) and some python libraries and
 - os
 
 **Functionality**
+- checks for a specific file in same dir or a fixed dir
