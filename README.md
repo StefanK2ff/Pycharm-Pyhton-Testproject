@@ -26,3 +26,9 @@ I'm trying out the pycharm IDE (community edition) and some python libraries and
 **Functionality**
 - takes first parameter (a file location) and offers options like
 - function: counting numbers in a file
+
+## folder.py
+**Imports**
+- os
+
+**Functionality**
