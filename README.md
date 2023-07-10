@@ -33,3 +33,11 @@ I'm trying out the pycharm IDE (community edition) and some python libraries and
 
 **Functionality**
 - checks for a specific file in same dir or a fixed dir
+
+
+## umlaute.py
+**Imports**
+- os
+
+**Functionality**
+- opens files in UTF 8
