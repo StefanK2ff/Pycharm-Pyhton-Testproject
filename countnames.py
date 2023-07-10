@@ -5,23 +5,17 @@
 import os
 
 FILEPATH = "data/names"
+SEARCHTERM = "Max"
 
-#try to get list of whats in the folder
+counter = 0
 
-temp_filnamelist = os.listdir("data/names")
+for filename in os.listdir(FILEPATH):
+    filepath = os.path.join(FILEPATH, filename)
 
-#making sure to just list real files
+    if os.path.isfile(filepath):
+        with open(filepath, "r", encoding="UTF-8") as file:
+            for line in file:
+                if line.split(" ")[0] == SEARCHTERM:
+                    counter += 1
 
-filenamelist = [name for name in temp_filnamelist if not os.path.isdir(os.path.join(FILEPATH, name))]
-
-
-print(filenamelist)
-
-# loop over name list , open it
-
-for filename in filenamelist:
-    with open(os.path.join(FILEPATH, filename), "r", encoding="UTF-8") as file:
-        counter = 0
-        for line in file:
-            counter += 1
-        print(filename + ": " + str(counter) + " entries")
+print(SEARCHTERM + " was found " + str(counter) + " times")
